@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+    <div class="flex flex-row h-full">
+        <aside class="w-64 h-full" aria-label="Sidebar">
+            {% include 'components/sidebar.html' %}
+        </aside>
+        <div class="flex flex-col w-full">
+            <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 flex-initial">
+                {% include 'components/navbar.html' %}
+            </nav>
+            <main class="p-3">
+                {% block content %}
+
+                {% endblock content %}
+            </main>
+        </div>
+    </div>
+{% endblock %}

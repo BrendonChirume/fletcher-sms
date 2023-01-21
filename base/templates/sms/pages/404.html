@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+    <div class="flex align-center justify-center">
+        <div>
+            <div class="flex">
+                <div>
+                    <h1 class="text-3xl font-bold">404!</h1>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold">Page not found</h1>
+                    <p>Please check the url in the address bar and try again!</p>
+                </div>
+            </div>
+            <div>
+                <a href="{% url 'home' %}" class="text-blue-500">Go back to home</a>
+                <a href="/" class="text-blue-500">Contact Support</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
