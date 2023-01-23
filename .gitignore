@@ -1,0 +1,8 @@
+#tailwind theme
+theme
+
+#python environment
+env
+
+#environment variables
+.env
