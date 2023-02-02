@@ -1,0 +1,27 @@
+<ul class="space-y-2">
+    <li>
+        <a href="{% url 'student_home' 'Jameson Anes' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-home-alt flex-shrink-0 w-5 h-5"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Home</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'student_subjects' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-book flex-shrink-0 w-5 h-5"></i>
+            <span class="ml-3">Subjects</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'student_report' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-file-pen flex-shrink-0 w-5 h-5"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Reports</span>
+        </a>
+    </li>
+
+</ul>

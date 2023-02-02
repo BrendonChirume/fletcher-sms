@@ -1,0 +1,35 @@
+<ul class="space-y-2">
+    <li>
+        <a href="{% url 'parent_home' 'Jameson Anes' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-home-alt flex-shrink-0 w-5 h-5"></i>
+            <span class="ml-3">Home</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'parent_child_marks' child_name='Brendon Chirume' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-file-pen flex-shrink-0 w-5 h-5"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Exam Results</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'parent_CA' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all ">
+            <i class="fa-solid fa-pen-ruler flex-shrink-0 w-5 h-5"></i>
+            <span class="ml-3">Continuous Assessment</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'parent_payments' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-money-bill flex-shrink-0 w-5 h-6"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Payments History</span>
+        </a>
+    </li>
+
+</ul>

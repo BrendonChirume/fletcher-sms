@@ -27,13 +27,18 @@ DEBUG = True
 TAILWIND_APP_NAME = 'theme'
 
 INTERNAL_IPS = [
-    "127.0.0.1",
+    '127.0.0.1',
+    'localhost',
 ]
 
 # npm bin path
 NPM_BIN_PATH = r'C:\Program Files\nodejs\npm.cmd'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '846c-149-34-244-171.eu.ngrok.io'
+]
 
 # Application definition
 

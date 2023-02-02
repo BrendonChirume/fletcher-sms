@@ -1,0 +1,10 @@
+{% extends 'layout/main.html' %}
+
+{% block sidebarcontent %}
+    {% include 'layout/sidebar.html' with user_type='accountant' %}
+{% endblock %}
+
+
+{% block content %}
+    Accountant Content
+{% endblock %}

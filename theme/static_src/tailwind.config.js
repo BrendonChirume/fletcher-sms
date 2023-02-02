@@ -39,7 +39,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', 'sans-serif', ...defaultTheme.fontFamily.sans],
             },
             primary: {
                 main: '#1c3365'

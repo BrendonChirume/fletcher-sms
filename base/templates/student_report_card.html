@@ -1,12 +1,12 @@
-{% extends 'main.html' %}
+{% extends 'layout/main.html' %}
 
 {% block content %}
     <div class="shadow-md md mx-auto px-6 py-5">
         <div class="grid grid-cols-2">
-            <p class="text-xl text-gray-500 ">
-                Student Name
+            <p class="text-base text-gray-500">
+                Student name
             </p>
-            <h2 class="text-2xl font-bold tracking-tight text-gray-800">
+            <h2 class="text-2xl col-span-2 font-bold tracking-tight text-gray-800">
                 {{ student_id }}
             </h2>
         </div>

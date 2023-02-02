@@ -1,0 +1,111 @@
+<ul class="space-y-2">
+    <li>
+        <a href="{% url 'principal_home' 'Brendon Chirume' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-home-alt flex-shrink-0 w-5 h-5"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Home</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'principal_subjects' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-book flex-shrink-0 w-5 h-5"></i>
+            <span class="ml-3">Subjects</span>
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'principal_teachers' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-user-group flex-shrink-0 w-5 h-5"></i>
+            <span class="ml-3">Teachers</span>
+        </a>
+    </li>
+
+
+    {#            <li class="overflow-hidden h-10 cursor-pointer hover:h-40 transition-all duration-300 ease-in-out#}
+    {#                    hover:bg-opacity-10 rounded-lg">#}
+    {#                <div class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-10#}
+    {#                        hover:text-white p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">#}
+    {#                    <i class="fa-solid fa-user-group flex-shrink-0 w-5 h-5"></i>#}
+    {#                    <span class="flex-1 ml-3 whitespace-nowrap">Teachers</span>#}
+    {#                    <span class="inline-flex items-center justify-end h-4 ml-3 mt-1 text-gray-400">#}
+    {#                                 {% include 'icons/carret.html' %}#}
+    {#                            </span>#}
+    {#                </div>#}
+    {##}
+    {#                <a href=""#}
+    {#                   class="block pl-10 py-2 pr-2 duration-300 ease-in-out font-normal hover:bg-gray-200 hover:bg-opacity-10#}
+    {#                           hover:text-white rounded-lg text-sm text-gray-300">#}
+    {#                    All Teachers#}
+    {#                </a>#}
+    {#                <a href=""#}
+    {#                   class="block pl-10 py-2 pr-2 duration-300 ease-in-out font-normal hover:bg-gray-200 hover:bg-opacity-10#}
+    {#                           hover:text-white rounded-lg text-sm text-ellipsis text-gray-300">#}
+    {#                    Teachers Details#}
+    {#                </a>#}
+    {#                <a href=""#}
+    {#                   class="block pl-10 py-2 pr-2 duration-300 ease-in-out font-normal hover:bg-gray-200 hover:bg-opacity-10#}
+    {#                           hover:text-white rounded-lg text-sm text-ellipsis text-gray-300">#}
+    {#                    Add Teacher#}
+    {#                </a>#}
+    {#            </li>#}
+
+    {#            <li class="overflow-hidden h-10 cursor-pointer hover:h-40 transition-all duration-300 ease-in-out bg-opacity-10#}
+    {#                    rounded-lg">#}
+    {#                <div class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30#}
+    {#                        hover:text-white p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">#}
+    {#                    <i class="fa-solid fa-people-group flex-shrink-0 w-5 h-5"></i>#}
+    {#                    <span class="flex-1 ml-3 whitespace-nowrap">Students</span>#}
+    {#                    <span class="inline-flex items-center justify-end h-4 ml-3 mt-1 text-gray-400">#}
+    {#                                 {% include 'icons/carret.html' %}#}
+    {#                            </span>#}
+    {#                </div>#}
+    {##}
+    {#                <a href=""#}
+    {#                   class="block pl-10 py-2 pr-2 duration-300 ease-in-out font-normal hover:bg-gray-200 hover:bg-opacity-10#}
+    {#                           hover:text-white rounded-lg text-sm text-ellipsis text-gray-300">#}
+    {#                    All Student#}
+    {#                </a>#}
+    {#                <a href=""#}
+    {#                   class="block pl-10 py-2 pr-2 duration-300 ease-in-out font-normal hover:bg-gray-200 hover:bg-opacity-10#}
+    {#                           hover:text-white rounded-lg text-sm text-ellipsis text-gray-300">#}
+    {#                    Student Details#}
+    {#                </a>#}
+    {#                <a href=""#}
+    {#                   class="block pl-10 py-2 pr-2 duration-300 ease-in-out font-normal hover:bg-gray-200 hover:bg-opacity-10#}
+    {#                           hover:text-white rounded-lg text-sm text-ellipsis text-gray-300">#}
+    {#                    Admission Form#}
+    {#                </a>#}
+    {#            </li>#}
+
+    <li>
+        <a href="{% url 'principal_students' %}"
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-users flex-shrink-0 w-5 h-5"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Students</span>
+        </a>
+    </li>
+
+    <li>
+        <a href=""
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-marker flex-shrink-0 w-5 h-5"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Enter marks</span>
+        </a>
+    </li>
+
+    <li>
+        <a href=""
+           class="duration-300 ease-in-out flex font-normal hover:bg-gray-200 hover:bg-opacity-30 hover:text-white
+               p-2 rounded-lg text-base text-ellipsis text-gray-300 transition-all">
+            <i class="fa-solid fa-file-pen flex-shrink-0 w-5 h-5"></i>
+            <span class="flex-1 ml-3 whitespace-nowrap">Reports</span>
+        </a>
+    </li>
+
+</ul>

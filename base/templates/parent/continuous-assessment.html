@@ -1,0 +1,102 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="mb-4 p-4">
+        <div class="flex">
+            <div>
+                <div class="dropdown relative">
+                    <button class="px-4 py-2 rounded-lg border align-center text-base text-gray-600 focus:outline-none
+                    focus:ring-0 transition duration-150 ease-in-out flex items-center peer students-dropdown
+                    whitespace-nowrap hover:border-blue-600 hover:text-blue-600 font-medium" type="button"
+                       id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select child&nbsp;&nbsp;&nbsp;
+                        {% include 'icons/carret.html' %}
+                    </button>
+                    <ul
+                            class="dropdown-menu min-w-max absolute peer-[.students-dropdown]:block hidden bg-white
+                            text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0
+                            bg-clip-padding border-none"
+                            aria-labelledby="dropdownMenuButton2">
+                        <li>
+                            <a class=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap
+                            bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                                Another action
+                            </a>
+                        </li>
+                        <li>
+                            <a class=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap
+                            bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                                Something else here
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border p-2 md:p-4 border rounded-lg bg-white">
+        <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden border rounded-lg">
+                        <table class="min-w-full text-center">
+                            <thead class="border-b bg-gray-100">
+                            <tr>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                    #
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                    First
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                    Last
+                                </th>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                    Handle
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="even:bg-gray-50 border-b">
+                                <td class="px-6 py-2 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    Mark
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    Otto
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    @mdo
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-2 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    Jacob
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    Thornton
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    @fat
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-2 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+                                <td colspan="2"
+                                    class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap text-center">
+                                    Larry the Bird
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    @twitter
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

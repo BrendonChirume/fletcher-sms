@@ -14,17 +14,23 @@
         </svg>
     </button>
     <h1 class="text-2xl font-bold tracking-tight text-gray-800 hidden md:block flex-grow">Dashboard</h1>
-    <form class="">
+    <form class="flex-1">
         <label for="default-search"
-               class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+               class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
         <h1 class="text-2xl font-bold tracking-tight text-gray-700 md:hidden">Dashboard</h1>
         <div class="relative hidden md:block">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <i class="fa fa-search w-4 h-4 text-gray-500"></i>
             </div>
             <input type="search" id="default-search"
-                   class="block w-full p-3 pl-10 text-gray-900 rounded-lg bg-gray-50 shadow
-                   placeholder-gray-500 focus:ring-0 border-0 text-base" placeholder="Search here..." required>
+                   class="block w-full p-3 pl-10 text-sm text-gray-900 border-0 rounded-lg bg-gray-100
+                   focus:ring-0 focus:border-blue-500 pr-24"
+                   placeholder="Search here..." required>
+            <button type="submit"
+                    class="text-white absolute right-0 bottom-0 bg-indigo-600 hover:bg-indigo-800 focus:ring-0
+                    focus:outline-none font-medium rounded-r-lg text-sm px-4 py-3">
+                Search
+            </button>
         </div>
     </form>
 
@@ -38,19 +44,30 @@
             <i class="fa fa-search w-4 h-4 text-gray-500 object-center"></i>
         </button>
 
-        <button type="button"
-                class="flex ml-3 rounded-full md:mr-0 text-gray-400 focus:ring-0 hover:text-gray-500 md:h-10
-                h-8 md:w-10 w-8 overflow-hidden bg-gray-100"
-                id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
-                data-dropdown-placement="bottom">
-            <span class="sr-only">Open user menu</span>
-            <svg class="h-full w-full" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-        </button>
+        <div class="flex align-center ">
+            <span>
+                <button type="button"
+                        class="flex ml-3 rounded-full md:mr-0 text-gray-400 focus:ring-0 hover:text-gray-500 md:h-10
+                        h-8 md:w-10 w-8 overflow-hidden bg-gray-100"
+                        id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                        data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <svg class="h-full w-full" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+            </span>
+            <div class="flex-col justify-center ml-3 hidden md:flex">
+                <div class="flex">
+                    <h2 class="text-sm font-bold mb-0">{{ principal_name }}</h2>
+                    {% include 'icons/carret.html' %}
+                </div>
+                <span class="text-xs text-gray-400">Admin</span>
+            </div>
+        </div>
 
         <!-- Dropdown menu -->
-        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow
+        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow
         dark:bg-gray-700 dark:divide-gray-600"
              id="user-dropdown">
             <div class="px-4 py-3">

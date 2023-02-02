@@ -1,8 +1,8 @@
-{% extends 'main.html' %}
+{% extends 'layout/main.html' %}
 
 {% block content %}
     <div>
-        <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:grid md:grid-cols-3 md:gap-6 pt-5 md-pt-0">
             <div class="md:col-span-1">
                 <div class="px-4 sm:px-0">
                     <h3 class="text-lg font-medium leading-6 text-gray-900">Profile</h3>
@@ -12,7 +12,7 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
                 <form action="#" method="POST">
-                    <div class="shadow sm:overflow-hidden sm:rounded-md">
+                    <div class="shadow sm:overflow-hidden sm:rounded-lg">
                         <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700">Photo</label>
@@ -23,7 +23,7 @@
                                       </svg>
                                     </span>
                                     <button type="button"
-                                            class="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            class="ml-5 rounded-lg border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                         Change
                                     </button>
                                 </div>
@@ -33,7 +33,7 @@
                                 <label for="about" class="block text-sm font-medium text-gray-700">About</label>
                                 <div class="mt-1">
                                     <textarea id="about" name="about" rows="3"
-                                              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                              class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                               placeholder="you@example.com"></textarea>
                                 </div>
                                 <p class="mt-2 text-sm text-gray-500">Brief description for your profile. URLs are
@@ -43,7 +43,7 @@
 
                         <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
                             <button type="submit"
-                                    class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                    class="inline-flex justify-center rounded-lg border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                 Save
                             </button>
                         </div>
@@ -69,28 +69,28 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
                 <form action="#" method="POST">
-                    <div class="overflow-hidden shadow sm:rounded-md">
+                    <div class="overflow-hidden shadow sm:rounded-lg">
                         <div class="bg-white px-4 py-5 sm:p-6">
                             <div class="grid grid-cols-6 gap-6">
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="first-name" class="block text-sm font-medium text-gray-700">First
                                         name</label>
                                     <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="last-name" class="block text-sm font-medium text-gray-700">Last
                                         name</label>
                                     <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="date-of-birth" class="block text-sm font-medium text-gray-700">
                                         Date of birth
                                     </label>
                                     <input type="date" name="date-of-birth" id="date-of-birth"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="birth-certificate-entry-number"
@@ -100,7 +100,7 @@
                                     <input type="text" name="birth-certificate-entry-number"
                                            id="birth-certificate-entry-number"
                                            autocomplete="family-name"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="place-of-birth" class="block text-sm font-medium text-gray-700">
@@ -108,14 +108,14 @@
                                     </label>
                                     <input type="text" name="place-of-birth" id="last-name"
                                            autocomplete="place-of-birth"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
                                 <div class="col-span-6 sm:col-span-1">
                                     <label for="place-of-issue" class="block text-sm font-medium text-gray-700">
                                         Place of issue
                                     </label>
                                     <select id="place-of-issue" name="place-of-issue" autocomplete="place-of-issue"
-                                            class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                            class="mt-1 block w-full rounded-lg border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
                                         <option>Harare</option>
                                         <option>Mutare</option>
                                         <option>Bulawayo</option>
@@ -128,14 +128,14 @@
                                     <label for="last-name" class="block text-sm font-medium text-gray-700">Last
                                         name</label>
                                     <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-4">
                                     <label for="email-address" class="block text-sm font-medium text-gray-700">Email
                                         address</label>
                                     <input type="text" name="email-address" id="email-address" autocomplete="email"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
 
                                 <div class="col-span-6">
@@ -143,33 +143,33 @@
                                         address</label>
                                     <input type="text" name="street-address" id="street-address"
                                            autocomplete="street-address"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-6 lg:col-span-2">
                                     <label for="city" class="block text-sm font-medium text-gray-700">City</label>
                                     <input type="text" name="city" id="city" autocomplete="address-level2"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                                     <label for="region" class="block text-sm font-medium text-gray-700">State /
                                         Province</label>
                                     <input type="text" name="region" id="region" autocomplete="address-level1"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
 
                                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                                     <label for="postal-code" class="block text-sm font-medium text-gray-700">ZIP /
                                         Postal code</label>
                                     <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
-                                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                                 </div>
                             </div>
                         </div>
                         <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
                             <button type="submit"
-                                    class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                    class="inline-flex justify-center rounded-lg border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                 Save
                             </button>
                         </div>
@@ -195,7 +195,7 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
                 <form action="#" method="POST">
-                    <div class="overflow-hidden shadow sm:rounded-md">
+                    <div class="overflow-hidden shadow sm:rounded-lg">
                         <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
                             <fieldset>
                                 <legend class="sr-only">By Email</legend>
@@ -204,7 +204,7 @@
                                     <div class="flex items-start">
                                         <div class="flex h-5 items-center">
                                             <input id="comments" name="comments" type="checkbox"
-                                                   class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                   class="h-4 w-4 rounded-lg border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         </div>
                                         <div class="ml-3 text-sm">
                                             <label for="comments" class="font-medium text-gray-700">Comments</label>
@@ -216,7 +216,7 @@
                                     <div class="flex items-start">
                                         <div class="flex h-5 items-center">
                                             <input id="candidates" name="candidates" type="checkbox"
-                                                   class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                   class="h-4 w-4 rounded-lg border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         </div>
                                         <div class="ml-3 text-sm">
                                             <label for="candidates" class="font-medium text-gray-700">Candidates</label>
@@ -227,7 +227,7 @@
                                     <div class="flex items-start">
                                         <div class="flex h-5 items-center">
                                             <input id="offers" name="offers" type="checkbox"
-                                                   class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                   class="h-4 w-4 rounded-lg border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                         </div>
                                         <div class="ml-3 text-sm">
                                             <label for="offers" class="font-medium text-gray-700">Offers</label>
@@ -264,7 +264,7 @@
                         </div>
                         <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
                             <button type="submit"
-                                    class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                    class="inline-flex justify-center rounded-lg border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                 Save
                             </button>
                         </div>

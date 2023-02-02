@@ -1,0 +1,91 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="flex">
+        <div class="mb-2">
+            <div class="flex">
+                <div>
+                    <div class="dropdown relative">
+                        <button class="px-4 py-2 rounded-lg border align-center text-base text-gray-600 focus:outline-none
+                    focus:ring-0 transition duration-150 ease-in-out flex items-center peer students-dropdown
+                    whitespace-nowrap hover:border-blue-600 hover:text-blue-600 font-medium" type="button"
+                                id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Select child&nbsp;&nbsp;&nbsp;
+                            {% include 'icons/carret.html' %}
+                        </button>
+                        <ul
+                                class="dropdown-menu min-w-max absolute hidden bg-white
+                            text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0
+                            bg-clip-padding border-none"
+                                aria-labelledby="dropdownMenuButton2">
+                            <li>
+                                <a class=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap
+                            bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                                    Another action
+                                </a>
+                            </li>
+                            <li>
+                                <a class=" dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap
+                            bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                                    Something else here
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <div class="overflow-x-auto">
+            <div class="py-2 inline-block min-w-full">
+                <div class="overflow-hidden md:border md:rounded-lg">
+                    <table class="min-w-full text-left capitalize">
+                        <thead class="border-b bg-white bg-gray-100">
+                        <tr>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                Date
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                Type
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                Description
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2 text-center">
+                                Tender
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-2">
+                                Amount
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for payment in payments %}
+                            <tr class="bg-white border-b even:bg-gray-50 last:border-b-0">
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    {{ payment.date }}
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    {{ payment.type }}
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    {{ payment.description }}
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap text-center">
+                                    {{ payment.tender }}
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-2 whitespace-nowrap">
+                                    {{ payment.amount }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

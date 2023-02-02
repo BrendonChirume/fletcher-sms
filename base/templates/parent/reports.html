@@ -1,0 +1,89 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="grid gap-4">
+        {% for subject_marks in results %}
+            <div class="border rounded-lg bg-white p-2 md:p-4">
+                <div class="w-50 rounded-lg flex pr-2">
+                    <div class="pr-4">
+                        <div class="w-20 h-20 shadow-md rounded-lg border border-gray-200 flex justify-center items-center
+                        overflow-hidden bg-gray-100">
+                            <img src="https://www.bchirume.me/profile.jpg" class="w-full" alt="student avatar"/>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h3 class="text-xl font-semibold text-gray-800">{{ subject_marks.child_name }}</h3>
+                        <p class="font-medium text-indigo-700">{{ subject_marks.form }} {{ subject_marks.term }}</p>
+                        <p class="font-medium text-indigo-700">30/01/2023</p>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="py-4 inline-block min-w-full sm:px-4 lg:px-8">
+                            <div class="overflow-hidden md:border md:rounded-lg border-b">
+                                <table class="min-w-full text-left">
+                                    <thead class="border-b bg-gray-100">
+                                    <tr>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-4 py-3">
+                                            Subject
+                                        </th>
+                                        <th scope="col" class="text-sm text-right font-medium text-gray-900 px-4 py-3">
+                                            F1 T1 Working CALA
+                                        </th>
+                                        <th scope="col" class="text-sm text-right font-medium text-gray-900 px-4 py-3">
+                                            F1 T1 Exam mark
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-4 py-3">
+                                            Remark
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for mark in subject_marks.marks %}
+                                        <tr class="even:bg-gray-50 border-b">
+                                            <td class="text-sm text-gray-900 font-light px-4 py-2 whitespace-nowrap">
+                                                {{ mark.subject }}
+                                            </td>
+                                            <td class="text-sm text-right text-gray-900 font-light px-4 py-2 whitespace-nowrap">
+                                                {{ mark.mark }}
+                                            </td>
+                                            <td class="text-sm text-right text-gray-900 font-light px-4 py-2 whitespace-nowrap">
+
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-light px-4 py-2 whitespace-nowrap">
+                                                {{ mark.remark }}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form action="/" method="post" class="flex justify-start flex-col">
+                    {% csrf_token %}
+                    <div class="my-4 w-full w-md-3/4">
+                        <label for="parent-report-remarks" class="form-label text-base inline-block mb-2 text-gray-700">
+                            Remarks
+                        </label>
+                        <div class="rounded-lg border overflow-hidden">
+                        <textarea class="form-control block border-0 w-full px-3 py-1.5 text-base font-normal
+                        text-gray-700 bg-white bg-clip-padding rounded transition ease-in-out m-0 focus:text-gray-700
+                        focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="parent-report-remarks"
+                                rows="4"
+                                placeholder="Your remarks here..."></textarea>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <Button class="bg-indigo-500 hover:bg-indigo-700 text-white text-sm py-2 px-4 rounded-lg">
+                            Comment
+                        </Button>
+                    </div>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
